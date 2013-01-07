@@ -2,7 +2,7 @@
   "author": "Matias Meno <m@tias.me>",
   "name": "jumpstarter",
   "description": "Starts up an app with clusters.",
-  "version": "0.0.1-dev",
+  "version": "0.0.1",
   "website": "https://github.com/enyo/jumpstarter",
   "keywords": [ "cluster", "startup" ],
   "repository": {
