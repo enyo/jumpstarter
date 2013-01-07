@@ -30,4 +30,8 @@ exports.createWorkers = (startupFunction) ->
 
   else
 
-    startupFunction()
+    startupFunction (info) ->
+      log = "Worker #{process.pid} created."
+      if info?.port and info.mode
+        log += " Express server listening on port #{info.port} in #{info.mode} mode"
+      console.log log
