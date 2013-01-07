@@ -1,5 +1,3 @@
-# Copyright(c) 2012 Inetcompany Matias Meno <m@tias.me>
- 
 
 # Module dependencies.
 cluster = require("cluster")

@@ -1,7 +1,7 @@
 {
   "author": "Matias Meno <m@tias.me>",
   "name": "jumpstarter",
-  "description": "Starts up an app with clusters",
+  "description": "Starts up an app with clusters.",
   "version": "0.0.1-dev",
   "website": "https://github.com/enyo/jumpstarter",
   "keywords": [ "cluster", "startup" ],
