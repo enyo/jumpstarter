@@ -11,7 +11,9 @@ delay = 5
 
 exports.createWorkers = (startupFunction) ->
 
-  if cluster.isMaster
+  console.log "Starting only one worker because not in production mode." if process.env.NODE_ENV != "production"
+
+  if cluster.isMaster and process.env.NODE_ENV == "production"
     console.log "Starting node cluster with #{numCPUs} workers."
 
     workersId = "#{new Date().getTime()}-#{process.pid}"
