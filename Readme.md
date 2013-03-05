@@ -1,6 +1,6 @@
 # Jumpstarter
 
-**Version 0.0.3-dev**
+**Version 0.0.3**
 
 Start multiple node clusters easily.
 
