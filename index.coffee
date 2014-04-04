@@ -9,17 +9,17 @@ restarts = 0
 workers = 0
 delay = 5
 
-exports.createWorkers = (startupFunction) ->
+exports.createWorkers = (startupFunction, cpuCount = numCPUs) ->
 
   console.log "Starting only one worker because not in production mode." if process.env.NODE_ENV != "production"
 
   if cluster.isMaster and process.env.NODE_ENV == "production"
-    console.log "Starting node cluster with #{numCPUs} workers."
+    console.log "Starting node cluster with #{cpuCount} workers."
 
     workersId = "#{new Date().getTime()}-#{process.pid}"
 
     # Fork workers.
-    for i in [0...numCPUs]
+    for i in [0...cpuCount]
       cluster.fork()
 
     cluster.on "exit", (worker, code, signal) ->
